@@ -1,5 +1,8 @@
 package algorithms;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class SelectionSort {
 
 	
@@ -16,6 +19,9 @@ public class SelectionSort {
 		 System.out.println("Sorted array:");
 		 selectionSort.printArray(arr);
 		
+		 
+		 Map<String,String> m = new HashMap<>(); 
+		 
 		   
 		
 	}
