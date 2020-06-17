@@ -22,14 +22,13 @@ public class PlusMinus {
         double positive = 0;
         double negative = 0;
         double zero =0;
-
-        double positiveSum = 0;
-        double negativeSum = 0;
-        double zeroSum = 0;
-
         for(int i = 0; i < arr.length; i++){
 
-            if(arr[i] > 0 ){
+            positive += arr[i] >0?1:0;
+            negative += arr[i] <0?1:0;
+            zero += arr[i] ==0 ?1:0;
+
+            /*if(arr[i] > 0 ){
 
                 positive++;
 
@@ -40,13 +39,15 @@ public class PlusMinus {
             }else if (arr[i]  == 0){
 
                 zero ++;
-            }
+            }*/
         }
 
-        positiveSum = (positive/arr.length);
+        System.out.println(positive/arr.length+"\n"+negative/arr.length+"\n"+zero/arr.length);
+
+        /*positiveSum = (positive/arr.length);
         negativeSum = (negative/arr.length);
         zeroSum =  (zero/arr.length);
 
-        System.out.println(positiveSum+"\n"+negativeSum +"\n"+zeroSum);
+        System.out.println(positiveSum+"\n"+negativeSum +"\n"+zeroSum);*/
     }
 }
