@@ -6,11 +6,11 @@ public class DaigonalDifference {
 
     public static void main(String[] args) {
 
-         Scanner in =  new Scanner(System.in);
+       Scanner in =  new Scanner(System.in);
 
         System.out.println("Enter size of diagonal");
         int size = in.nextInt();
-
+          //
          int arr[][] = new int[size][size];
 
         System.out.println("Enter diagonal element:");
