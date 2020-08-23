@@ -12,9 +12,21 @@ public class FactorialAlgorithms {
 
         int num = in.nextInt();
 
-        System.out.println(iterativeFactorial(num));
+        //System.out.println(iterativeFactorial(num));
+
+        // recursive alogorithm
+
+        System.out.println(recursivefactorial(num));
 
 
+
+
+    }
+
+    private static int recursivefactorial(int num) {
+        if(num == 0) return 1;
+
+        return  num * recursivefactorial(num -1);
 
 
     }
