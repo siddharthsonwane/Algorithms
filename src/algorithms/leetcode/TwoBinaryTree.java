@@ -4,6 +4,7 @@ import algorithms.BST.Node;
 
 public class TwoBinaryTree {
 
+    Node root;
 
     static Node newNode(int data)
     {
@@ -39,8 +40,36 @@ public class TwoBinaryTree {
         return t1;
     }
 
+    static int maxDepth(Node root){
+
+        if(root == null){
+            return 0;
+        }else{
+
+            int ldepth = maxDepth(root.left);
+            int rdepth = maxDepth(root.right);
+
+            if(ldepth > rdepth)
+                return ldepth;
+            else
+                return rdepth;
+
+        }
+
+
+
+
+    }
+
+
+
+
+
 
     public static void main(String[] args) {
+
+        TwoBinaryTree tree = new TwoBinaryTree();
+
 
 
          /* Let us construct the first Binary Tree
@@ -74,6 +103,11 @@ public class TwoBinaryTree {
         Node root3 = MergeTrees(root1, root2);
         System.out.printf("The Merged Binary Tree is:\n");
         inorder(root3);
+
+        System.out.println("height : "+maxDepth(tree.root));
+
+
+
 
     }
 
